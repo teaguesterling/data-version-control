@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Spack Env
+.spack-env/
+spack.lock
+spack.yaml
+
