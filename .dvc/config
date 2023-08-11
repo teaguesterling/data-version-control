@@ -1,4 +1,7 @@
 [core]
     remote = local_store
+[cache]
+    dir = /home/teague/Data/learning/dvc-cache/
+    type = symlink
 ['remote "local_store"']
     url = /home/teague/Data/learning/dvc/

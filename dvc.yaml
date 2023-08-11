@@ -45,6 +45,6 @@ stages:
     - src/evaluate.py
     - data/prepared/test.csv
     - model/model.joblib
-    outs:
+    metrics:
     - metrics/accuracy.json:
         cache: false
