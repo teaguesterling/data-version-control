@@ -26,6 +26,7 @@ stages:
   prepare:
     cmd: python src/prepare.py
     deps:
+    - src/prepare.py
     - data/raw/train
     - data/raw/val
     outs:
@@ -34,12 +35,14 @@ stages:
   train:
     cmd: python src/train.py
     deps:
+    - src/train.py
     - data/prepared/train.csv
     outs:
     - model/model.joblib
   evaluate:
     cmd: python src/evaluate.py
     deps:
+    - src/evaluate.py
     - data/prepared/test.csv
     - model/model.joblib
     outs:
