@@ -1,0 +1,22 @@
+schema: '2.0'
+stages:
+  download:
+    cmd: wget https://s3.amazonaws.com/fast-ai-imageclas/imagenette2-160.tgz -O data/received/imagenette2-160.tgz
+    outs:
+    - path: data/received/imagenette2-160.tgz
+      hash: md5
+      md5: e793b78cc4c9e9a4ccc0c1155377a412
+      size: 99003388
+  extract:
+    cmd: tar -xzvf data/received/imagenette2-160.tgz -C data/raw
+    deps:
+    - path: data/received/imagenette2-160.tgz
+      hash: md5
+      md5: e793b78cc4c9e9a4ccc0c1155377a412
+      size: 99003388
+    outs:
+    - path: data/raw/imagenette2-160
+      hash: md5
+      md5: c5261f96ce891b0da90173fb43f3950d.dir
+      size: 107794109
+      nfiles: 13397
