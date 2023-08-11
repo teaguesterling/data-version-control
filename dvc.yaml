@@ -11,3 +11,15 @@ stages:
     outs:
     - data/raw/imagenette2-160:
         persist: true
+  setup-raw:
+    cmd: ln -svfnr data/raw/imagenette2-160/noisy_imagenette.csv data/raw/imagenette2-160/train
+      data/raw/imagenette2-160/val data/raw/
+    deps:
+    - data/raw/imagenette2-160
+    outs:
+    - data/raw/train:
+        cache: false
+        persist: true
+    - data/raw/val:
+        cache: false
+        persist: true

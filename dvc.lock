@@ -20,3 +20,23 @@ stages:
       md5: c5261f96ce891b0da90173fb43f3950d.dir
       size: 107794109
       nfiles: 13397
+  setup-raw:
+    cmd: ln -svfnr data/raw/imagenette2-160/noisy_imagenette.csv data/raw/imagenette2-160/train
+      data/raw/imagenette2-160/val data/raw/
+    deps:
+    - path: data/raw/imagenette2-160
+      hash: md5
+      md5: c5261f96ce891b0da90173fb43f3950d.dir
+      size: 107794109
+      nfiles: 13397
+    outs:
+    - path: data/raw/train
+      hash: md5
+      md5: 7adc7abb69056f4d7afb512c78f2fce9.dir
+      size: 75309082
+      nfiles: 9470
+    - path: data/raw/val
+      hash: md5
+      md5: 0ad4dcf197b452735726bf8d8777201d.dir
+      size: 31248080
+      nfiles: 3925
