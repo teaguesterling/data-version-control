@@ -23,3 +23,11 @@ stages:
     - data/raw/val:
         cache: false
         persist: true
+  prepare:
+    cmd: python src/prepare.py
+    deps:
+    - data/raw/train
+    - data/raw/val
+    outs:
+    - data/prepared/test.csv
+    - data/prepared/train.csv
