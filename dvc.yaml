@@ -1,3 +1,11 @@
+artifacts:
+  classifier:
+    path: model/model.joblib
+    type: model
+    desc: "Selected Model"
+    labels:
+      - random
+      - imagenette2
 stages:
   download:
     cmd: wget https://s3.amazonaws.com/fast-ai-imageclas/imagenette2-160.tgz -O data/received/imagenette2-160.tgz
